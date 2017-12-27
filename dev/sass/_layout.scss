@@ -1,0 +1,10 @@
+.l-site-wrapper {
+  position: relative;
+  transition: $transition-in;
+  &.is-open {
+    transform: translateX(-260px);
+    transition: $transition-out;
+  }
+}
+
+//DEFINE LAYOUT ELEMENTS

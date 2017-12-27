@@ -1,0 +1,12 @@
+{
+    "name": "jumpline",
+    "version": "1.0.0",
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-autoprefixer": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-compass": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-watch": "*"
+    }
+}

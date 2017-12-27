@@ -1,0 +1,62 @@
+//DEFINE BASIC ELEMENTS
+
+html {
+  font-family: $siteFont;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  font-family: $siteFont;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+a {
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+h1,h2,h3,h4 {
+  
+}
+
+h1 {
+
+}
+
+h2 {
+  
+}
+h3 {
+  
+}
+
+h4 {
+
+}
+
+p {
+  
+}
+
+ul, li {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
