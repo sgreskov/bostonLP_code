@@ -1,11 +1,11 @@
 @import "normalize";
 
-@import "settings.colors";
-@import "settings.global";
+@import "mixins";
 
+@import "settings.global";
 @import "base";
 
+@import "grid";
 @import "layout";
-@import "layout.grid";
 
 @import "utilities";

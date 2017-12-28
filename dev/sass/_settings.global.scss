@@ -1,14 +1,49 @@
-//fonts
-$siteFont: 'Roboto', sans-serif;
-$siteFont_alt: 'Roboto Slab', serif;
-
-
 //Media Queries
-$small:  "screen and (min-width : 600px)";
-$medium: "screen and (min-width : 1024px)";
-$large: "screen and (min-width : 1440px)";
+$small:  "screen and (max-width : 800px)";
+$medium: "screen and (max-width : 1024px)";
+
+//Fonts
+$siteFont: 'Lato', sans-serif;
+
+//Colors
+	$blue: #667dbd;
+	$light_blue: #647bbc;
+	$green: #45b649;
+	$orange: #f05025;
+	$light_orange: #f36d4c;
+	$black: #231f20;
+
+//Color Map
+$page-colors: (
+	blue: #667dbd,
+	green: #45b649,
+	orange: #f05025,
+	black: #231f20,
+	white: #ffffff
+);
+
+@each $page-color, $color in $page-colors {
+	.bgc-#{$page-color} {
+		background-color: $color;
+	} 
+	.c-#{$page-color} {
+		color: $color;
+	}
+}
+
+.gradient-orange {
+	background: linear-gradient(to bottom right, $light_orange, $orange);
+}
+.gradient-blue {
+	background: linear-gradient(to bottom right, $light_blue, $blue);
+}
 
 //Misc
 $border-radius: 3px;
 $transition-in: .3s ease-in;
 $transition-out: .3s ease-out;
+
+//Grid
+$margin: 4%;
+$site-padding: 6.5%;
+

@@ -1,0 +1,11 @@
+@mixin gridRow($numPerRow) {
+	width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+	&:nth-child(n) {
+		margin-right: $margin;	
+		margin-bottom: $margin;
+	}
+	&:nth-child(#{$numPerRow}n) {
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+}

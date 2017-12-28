@@ -1,0 +1,57 @@
+//Grid
+
+.g-2, .g-3, .g-full {
+	display: table-cell;
+	
+} 
+.g-2 {
+	@include gridRow(2);
+	padding: 64px $site-padding;
+	vertical-align: middle;
+	
+	@media #{$small} {
+		@include gridRow(1);
+		display: block;
+	}
+}
+.g-3 {
+	@include gridRow(3);
+	padding: 96px ($site-padding / 1.5);
+	vertical-align: top;
+	@media #{$small} {
+		@include gridRow(1);
+		display: block;
+		padding: 60px ($site-padding / 1.5) 24px;
+	}
+}
+.g-full {
+	padding: 120px $site-padding;
+	width: 100%;
+	display: block;
+	position: relative;
+	@media #{$small} {
+		padding: 72px $site-padding;
+	}
+}
+
+.g-slant-full-img {
+	position: relative;
+	&.white-slant {
+		&:after {
+			content: '';
+			position: absolute;
+			left: -500px;
+			bottom: 0;
+			top: 0;
+			overflow: visible;
+			width: 300px;
+			z-index: 0;
+			background: white;
+			-webkit-transform: skewX(-18deg) translate(100%, 0);
+			-ms-transform: skewX(-18deg) translate(100%, 0);
+			transform: skewX(-18deg) translate(100%, 0);
+			-webkit-backface-visibility: initial;
+			backface-visibility: initial;
+		}
+	}
+}

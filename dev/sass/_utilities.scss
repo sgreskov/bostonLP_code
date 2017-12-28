@@ -17,3 +17,29 @@
 	border-radius: 50%;
 	display: inline-block;
 }
+
+.u-extra-padding {
+		padding-left: ($site-padding * 1.25);
+		padding-right: ($site-padding * 1.25);
+	@media #{$small} {
+    padding-left: $site-padding;
+		padding-right: $site-padding;
+		padding-top: 40px;
+		padding-bottom: 80px;
+  }
+}
+
+
+//Silent Class Selectors 
+%clearfix {
+	*zoom: 1;
+  &:before,
+	&:after {
+    content: "";
+    display: table;
+		line-height: 0;
+  }
+	&:after {
+		clear: both;
+	}
+}

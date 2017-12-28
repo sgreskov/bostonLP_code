@@ -1,4 +1,7 @@
 //DEFINE BASIC ELEMENTS
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-family: $siteFont;
@@ -25,33 +28,61 @@ em {
 }
 
 a {
-  
+  text-decoration: none;
   &:hover {
     cursor: pointer;
   }
 }
 
-h1,h2,h3,h4 {
-  
+h1,h2 {
+  font-weight: 700;
 }
 
 h1 {
+  margin: 140px (-$site-padding - 1) 0;
+  padding: 24px 32px 24px 6.5%;
+  background: $green;
+  position: relative;
+  display: inline-block;
+  
+  font: 700 32px/32px $siteFont;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    right: 25px;
+    bottom: 0;
+    top: 0;
+    overflow: visible;
+    width: 40px;
 
+    background: $green;
+    z-index: 3;
+    -webkit-transform: skewX(-18deg) translate(100%, 0);
+    -ms-transform: skewX(-18deg) translate(100%, 0);
+    transform: skewX(-18deg) translate(100%, 0);
+    -webkit-backface-visibility: initial;
+    backface-visibility: initial; 
+  }
+  
+  
 }
 
 h2 {
-  
-}
-h3 {
-  
-}
-
-h4 {
-
+  font: 700 24px/32px $siteFont;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 p {
+  font: 300 16px/24px $siteFont;
+  margin-top: 0;
+  margin-bottom: 24px;
   
+  a {
+    font: 700 16px/24px $siteFont;
+    color: $green;
+  }
 }
 
 ul, li {
