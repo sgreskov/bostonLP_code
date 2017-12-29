@@ -96,17 +96,17 @@
 }
 
 .bgi-hq {
-	background: url(/i/bostonHQ.jpg) no-repeat top left;
+	background: url(i/bostonHQ.jpg) no-repeat top left;
 	background-size: cover;
 }
 
 .bgi-community {
-	background: url(/i/community.jpg) no-repeat top left;
+	background: url(i/community.jpg) no-repeat top left;
 	background-size: cover;
 }
 
 .eco_winner {
-	background: url(/i/eco_winners.jpg) no-repeat center center;
+	background: url(i/eco_winners.jpg) no-repeat center center;
 	background-size: cover;
 
 	h2,
@@ -130,7 +130,7 @@
 }
 
 .about-img {
-	background: url(/i/guy.jpg) no-repeat center right;
+	background: url(i/guy.jpg) no-repeat center right;
 	background-size: cover;
 }
 
@@ -145,7 +145,7 @@
 
 	&:after {
 		content: '';
-		background: url(/i/Cityscape%20icon.png) no-repeat bottom left;
+		background: url(i/Cityscape%20icon.png) no-repeat bottom left;
 		background-size: 100%;
 		position: absolute;
 		bottom: -1px;
@@ -169,7 +169,7 @@
 }
 
 .header {
-	background: url(/i/header_image.jpg) no-repeat top left;
+	background: url(i/header_image.jpg) no-repeat top left;
 	background-size: cover;
 	height: 600px;
 	padding: 64px $site-padding;
