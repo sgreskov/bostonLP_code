@@ -9,3 +9,7 @@
 		margin-bottom: 0;
 	}
 }
+
+@mixin debug($line-weight, $line-color) {
+	outline: #{$line-weight}px solid $line-color;
+}

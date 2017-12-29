@@ -1,9 +1,7 @@
 //Grid
-
-.g-2, .g-3, .g-full {
-	display: table-cell;
-	
-} 
+.g-2, .g-3, .g-4 {
+		float: left;
+}
 .g-2 {
 	@include gridRow(2);
 	padding: 64px $site-padding;
@@ -11,26 +9,98 @@
 	
 	@media #{$small} {
 		@include gridRow(1);
-		display: block;
 	}
 }
 .g-3 {
 	@include gridRow(3);
-	padding: 96px ($site-padding / 1.5);
+	padding: 64px ($site-padding - 2);
 	vertical-align: top;
+	
+	@media #{$medium} {
+		padding-left: ($site-padding - 3);
+		padding-right: ($site-padding - 3);
+	}
+	
 	@media #{$small} {
 		@include gridRow(1);
-		display: block;
-		padding: 60px ($site-padding / 1.5) 24px;
+		padding: 60px $site-padding 24px;
+	}
+	@media #{$babyBear} {
+		@include gridRow(1);
+		padding: 60px 0 24px;
+	}
+}
+.g-4 {
+	@include gridRow(4);
+	padding: 64px $site-padding;
+	vertical-align: middle;
+	
+	@media #{$medium} {
+		@include gridRow(2);
+	}
+	
+	@media #{$small} {
+		@include gridRow(1);
 	}
 }
 .g-full {
-	padding: 120px $site-padding;
+	padding: 104px $site-padding;
 	width: 100%;
 	display: block;
 	position: relative;
 	@media #{$small} {
 		padding: 72px $site-padding;
+	}
+}
+.g_contain {
+	width: 100%;
+	position: relative;
+	@extend %clearfix;
+	&.butted {
+		.g-2 {
+			width: 50%;
+			@media #{$medium} {
+				padding-left: ($site-padding - 2);
+				padding-right: ($site-padding - 2);
+				padding-top: 40px;
+			}
+			@media #{$small} { 
+				padding-top: 64px;
+				padding-left: $site-padding;
+				padding-right: $site-padding;
+			}
+		}
+		.g-2, .g-3 {
+			margin-right: 0;
+			margin-bottom: 0;
+			height: 400px;
+			display: table-cell;
+			&.bgi-hq, &.bgi-community {
+				padding: 0;
+				img {
+					display: none;
+					@media #{$small} {
+						display: block;
+					}
+				}
+				@media #{$small} {
+					background: none;
+				}
+			}
+			@media #{$small} {
+				height: auto;
+				width: 100%;
+			}
+		}
+		@media #{$small} {
+			display: flex; 
+			flex-flow: column;
+			
+			.one {order: 1};
+			.two {order: 2};
+			.three {order: 4};
+			.four {order: 3};
+		}
 	}
 }
 
@@ -52,6 +122,10 @@
 			transform: skewX(-18deg) translate(100%, 0);
 			-webkit-backface-visibility: initial;
 			backface-visibility: initial;
+			
+			@media #{$small} {
+				display: none;
+			}
 		}
 	}
 }

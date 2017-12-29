@@ -11,6 +11,12 @@
 }
 
 .u-small-text {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.u-screenreader {
+   display: none;
 }
 
 .u-circle {
@@ -18,17 +24,22 @@
 	display: inline-block;
 }
 
-.u-extra-padding {
-		padding-left: ($site-padding * 1.25);
-		padding-right: ($site-padding * 1.25);
-	@media #{$small} {
+.u-extra-padding-sides {
+		padding-left: ($site-padding + 2);
+		padding-right: ($site-padding + 2);
+	@media #{$medium} {
     padding-left: $site-padding;
 		padding-right: $site-padding;
-		padding-top: 40px;
-		padding-bottom: 80px;
   }
 }
-
+.u-extra-padding-top {
+	padding-top: 64px;
+}
+.u-extra-padding-bottom {
+	@media #{$small} {
+		padding-bottom: 64px;
+	}
+}
 
 //Silent Class Selectors 
 %clearfix {

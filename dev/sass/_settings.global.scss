@@ -1,4 +1,5 @@
 //Media Queries
+$babyBear: "screen and (max-width : 480px)";
 $small:  "screen and (max-width : 800px)";
 $medium: "screen and (max-width : 1024px)";
 
@@ -9,9 +10,12 @@ $siteFont: 'Lato', sans-serif;
 	$blue: #667dbd;
 	$light_blue: #647bbc;
 	$green: #45b649;
+	$light_green: #58b66b;
 	$orange: #f05025;
 	$light_orange: #f36d4c;
 	$black: #231f20;
+	$grey: #b2b2b2;
+	$light_grey: #e6e6e6;
 
 //Color Map
 $page-colors: (
@@ -19,7 +23,8 @@ $page-colors: (
 	green: #45b649,
 	orange: #f05025,
 	black: #231f20,
-	white: #ffffff
+	white: #ffffff,
+	grey: #b2b2b2
 );
 
 @each $page-color, $color in $page-colors {
@@ -37,6 +42,9 @@ $page-colors: (
 .gradient-blue {
 	background: linear-gradient(to bottom right, $light_blue, $blue);
 }
+.gradient-green {
+	background: linear-gradient(to bottom right, $light_green, $green);
+}
 
 //Misc
 $border-radius: 3px;
@@ -45,5 +53,5 @@ $transition-out: .3s ease-out;
 
 //Grid
 $margin: 4%;
-$site-padding: 6.5%;
+$site-padding: 6%;
 

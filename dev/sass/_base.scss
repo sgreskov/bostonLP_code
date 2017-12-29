@@ -29,8 +29,11 @@ em {
 
 a {
   text-decoration: none;
+  transition: $transition-in;
   &:hover {
     cursor: pointer;
+    opacity: .8;
+    transition: $transition-out;
   }
 }
 
@@ -39,22 +42,35 @@ h1,h2 {
 }
 
 h1 {
-  margin: 140px (-$site-padding - 1) 0;
-  padding: 24px 32px 24px 6.5%;
+  margin: 140px (-$site-padding) 0;
+  padding: 24px 80px 24px 6.5%;
   background: $green;
   position: relative;
   display: inline-block;
+  letter-spacing: 1px;
+    
+  @include slideInLeft(
+    $duration: 1.5s,
+    $delay: 0,
+    $function: ease-out
+  );
+
   
-  font: 700 32px/32px $siteFont;
+  span {
+    font: 700 36px/36px $siteFont;
+    z-index: 999;
+    position: relative;
+  }
   
-  &:after {
+  
+  &:before {
     content: '';
     position: absolute;
-    right: 25px;
+    right: 360px;
     bottom: 0;
     top: 0;
     overflow: visible;
-    width: 40px;
+    width: 400px;
 
     background: $green;
     z-index: 3;
