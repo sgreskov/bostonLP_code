@@ -80,6 +80,29 @@
 		</div>
 		<div class="g-full bgc-white c-black">
 			<h2 class="u-text-align-center">Blog Section</h2>
+
+			<section class="l-card-grid">
+				<div class="l-grid">
+			<?php
+			//pull in posts
+			$posts = json_decode(file_get_contents( 'http://gsvlabs.com/wp-json/wp/v2/posts/?per_page=4' ));
+
+			//loop through posts
+			foreach( $posts as $post ) {
+				//print_r($post);
+			?>
+			<a href="<?php echo $post->link; ?>"  class="l-grid__item l-grid__item--4" >
+				<div class="l-card l-card--tall">
+					<div class="l-card-image" style="background-image: url(<?php echo $post->acf->featured_image; ?>);"></div>
+					<p class="l-card-info"><?php echo $post->title->rendered; ?></p>
+					<div class="c-btn">More</div>
+				</div>
+			</a>
+			<?php
+			}
+			?>
+		</div>
+			</section>
 		</div>
 		<div class="g_contain butted bgc-white c-black gsv-about">
 			<ul class="c-tick_graphic-3">
