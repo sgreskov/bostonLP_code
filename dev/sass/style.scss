@@ -4,11 +4,14 @@
 
 @import "mixins";
 
+@import "lib.slick";
+
 @import "settings.global";
 @import "base";
 
 @import "grid";
 @import "layout";
 @import "layout.card";
+@import "layout.carousel";
 
 @import "utilities";

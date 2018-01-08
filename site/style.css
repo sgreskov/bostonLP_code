@@ -1639,6 +1639,225 @@ template {
   display: none;
 }
 
+/* Slider */
+/* line 3, ../../../../dev/sass/lib/slick.scss */
+/* line 3, ../dev/sass/_lib.slick.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+}
+
+/* line 19, ../../../../dev/sass/lib/slick.scss */
+/* line 20, ../dev/sass/_lib.slick.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 26, ../../../../dev/sass/lib/slick.scss */
+/* line 28, ../dev/sass/_lib.slick.scss */
+.slick-list:focus {
+  outline: none;
+}
+
+/* line 30, ../../../../dev/sass/lib/slick.scss */
+/* line 32, ../dev/sass/_lib.slick.scss */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 35, ../../../../dev/sass/lib/slick.scss */
+/* line 38, ../dev/sass/_lib.slick.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 44, ../../../../dev/sass/lib/slick.scss */
+/* line 46, ../dev/sass/_lib.slick.scss */
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+
+/* line 50, ../../../../dev/sass/lib/slick.scss */
+/* line 53, ../dev/sass/_lib.slick.scss */
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+/* line 56, ../../../../dev/sass/lib/slick.scss */
+/* line 58, ../dev/sass/_lib.slick.scss */
+.slick-track:after {
+  clear: both;
+}
+
+/* line 60, ../../../../dev/sass/lib/slick.scss */
+/* line 62, ../dev/sass/_lib.slick.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 64, ../../../../dev/sass/lib/slick.scss */
+/* line 67, ../dev/sass/_lib.slick.scss */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  padding: 0;
+  text-align: center;
+  display: none;
+}
+
+/* line 71, ../../../../dev/sass/lib/slick.scss */
+/* line 76, ../dev/sass/_lib.slick.scss */
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+/* line 75, ../../../../dev/sass/lib/slick.scss */
+/* line 80, ../dev/sass/_lib.slick.scss */
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+/* line 81, ../../../../dev/sass/lib/slick.scss */
+/* line 84, ../dev/sass/_lib.slick.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+/* line 85, ../../../../dev/sass/lib/slick.scss */
+/* line 88, ../dev/sass/_lib.slick.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+/* line 89, ../../../../dev/sass/lib/slick.scss */
+/* line 92, ../dev/sass/_lib.slick.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+/* line 93, ../../../../dev/sass/lib/slick.scss */
+/* line 96, ../dev/sass/_lib.slick.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 99, ../../../../dev/sass/lib/slick.scss */
+/* line 103, ../dev/sass/_lib.slick.scss */
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: none;
+  width: 11px;
+  height: 18px;
+  background: none;
+  background-repeat: none;
+  background-size: 11px 18px;
+  font-size: 0;
+  line-height: 0;
+  z-index: 100;
+}
+
+/* line 114, ../../../../dev/sass/lib/slick.scss */
+/* line 119, ../dev/sass/_lib.slick.scss */
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* line 118, ../../../../dev/sass/lib/slick.scss */
+/* line 123, ../dev/sass/_lib.slick.scss */
+.slick-arrow.slick-prev {
+  background-image: url(i/icon_left-arrow.svg);
+  left: -8px;
+}
+
+/* line 123, ../../../../dev/sass/lib/slick.scss */
+/* line 128, ../dev/sass/_lib.slick.scss */
+.slick-arrow.slick-next {
+  background-image: url(i/icon_right-arrow.svg);
+  right: -8px;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 129, ../../../../dev/sass/lib/slick.scss */
+  /* line 134, ../dev/sass/_lib.slick.scss */
+  .slick-arrow.slick-prev {
+    left: -20px;
+  }
+
+  /* line 133, ../../../../dev/sass/lib/slick.scss */
+  /* line 138, ../dev/sass/_lib.slick.scss */
+  .slick-arrow.slick-next {
+    right: -20px;
+  }
+}
+/* line 142, ../../../../dev/sass/lib/slick.scss */
+/* line 144, ../dev/sass/_lib.slick.scss */
+.slick-dots {
+  position: absolute;
+  right: 3.25%;
+  bottom: 5%;
+}
+
+/* line 147, ../../../../dev/sass/lib/slick.scss */
+/* line 150, ../dev/sass/_lib.slick.scss */
+.slick-dots li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/* line 151, ../../../../dev/sass/lib/slick.scss */
+/* line 155, ../dev/sass/_lib.slick.scss */
+.slick-dots li:first-child {
+  margin-left: 0;
+}
+
+/* line 156, ../../../../dev/sass/lib/slick.scss */
+/* line 159, ../dev/sass/_lib.slick.scss */
+.slick-dots li.slick-active button {
+  background: #fff;
+}
+
+/* line 162, ../../../../dev/sass/lib/slick.scss */
+/* line 163, ../dev/sass/_lib.slick.scss */
+.slick-dots button {
+  font-size: 0;
+  line-height: 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 /* line 31, ../dev/sass/_settings.global.scss */
 .bgc-blue {
   background-color: #667dbd;
@@ -2758,6 +2977,179 @@ button:hover {
   /* line 177, ../dev/sass/_layout.card.scss */
   .l-card-info {
     padding-bottom: 20px;
+  }
+}
+/* line 1, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity {
+  min-height: 436px;
+  position: relative;
+  border-bottom: 1px solid #ebebeb;
+  font: 300 24px/28px "Lato", "Arial";
+  overflow: hidden;
+}
+/* line 8, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity p {
+  font: 300 21px/25px "Lato", "Arial";
+}
+
+@media screen and (min-width: 1100px) {
+  /* line 14, ../dev/sass/_layout.carousel.scss */
+  .l-home-gravity {
+    min-height: 636px;
+  }
+}
+/* line 19, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity .c-gravity__content {
+  position: absolute;
+  top: 0;
+  color: #fff;
+}
+
+/* line 25, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity .h1 {
+  font: 900 64px/92px "Lato", "Arial";
+  color: #fff;
+  padding: 0 35px 0 30px;
+  background: #00c93b;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  z-index: 1000;
+}
+/* line 35, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity .h1:after {
+  content: '';
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+  top: 0;
+  overflow: visible;
+  width: 40px;
+  background: #00c93b;
+  z-index: 3;
+  -ms-transform: skewX(-18deg) translate(100%, 0);
+  transform: skewX(-18deg) translate(100%, 0);
+  backface-visibility: initial;
+}
+
+/* line 53, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity p {
+  margin-left: 30px;
+  color: #fff;
+}
+
+/* line 58, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity .c-tick_graphic-1, .l-home-gravity .c-tick_graphic-2 {
+  position: absolute;
+}
+
+/* line 62, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity .c-tick_graphic-1 li, .l-home-gravity .c-tick_graphic-2 li {
+  display: inline;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* line 68, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity .c-tick_graphic-1 li img, .l-home-gravity .c-tick_graphic-2 li img {
+  height: 20px;
+}
+
+/* line 72, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity .c-tick_graphic-1 {
+  top: 150px;
+  left: 150px;
+}
+
+/* line 77, ../dev/sass/_layout.carousel.scss */
+.l-home-gravity .c-tick_graphic-2 {
+  top: 319px;
+  right: -7px;
+}
+
+@media screen and (min-width: 1100px) {
+  /* line 83, ../dev/sass/_layout.carousel.scss */
+  .l-home-gravity {
+    min-height: 636px;
+  }
+
+  /* line 87, ../dev/sass/_layout.carousel.scss */
+  .l-home-gravity .c-tick_graphic-1 {
+    top: 273px;
+    left: 200px;
+  }
+
+  /* line 92, ../dev/sass/_layout.carousel.scss */
+  .l-home-gravity .c-tick_graphic-2 {
+    top: 429px;
+    right: -7px;
+  }
+}
+/* line 101, ../dev/sass/_layout.carousel.scss */
+.c-gravity__content {
+  padding: 160px 0 0;
+  font-size: 21px;
+  line-height: 25px;
+}
+
+/* line 107, ../dev/sass/_layout.carousel.scss */
+.c-gravity__content p {
+  margin-left: 0;
+  padding-left: 40px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1100px) {
+  /* line 114, ../dev/sass/_layout.carousel.scss */
+  .c-gravity__content {
+    padding: 285px 0 0;
+  }
+}
+/* line 121, ../dev/sass/_layout.carousel.scss */
+.c-gravity__title {
+  font-size: 50px;
+  line-height: 74px;
+  margin: 0;
+  padding-left: 40px;
+  height: 74px;
+  margin-bottom: 18px;
+  width: 462px;
+}
+
+/* line 131, ../dev/sass/_layout.carousel.scss */
+.c-gravity__title span {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  line-height: 74px;
+}
+
+/* line 138, ../dev/sass/_layout.carousel.scss */
+.c-gravity__title span.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width: 1100px) {
+  /* line 144, ../dev/sass/_layout.carousel.scss */
+  .c-gravity__title {
+    width: 470px;
+    font-size: 70px;
+    line-height: 94px;
+    margin: 0;
+    padding-left: 40px;
+    height: 94px;
+    margin-bottom: 18px;
+  }
+
+  /* line 154, ../dev/sass/_layout.carousel.scss */
+  .c-gravity__title:after {
+    width: 45px;
+  }
+
+  /* line 158, ../dev/sass/_layout.carousel.scss */
+  .c-gravity__title span {
+    line-height: 94px;
   }
 }
 /* line 1, ../dev/sass/_utilities.scss */

@@ -14,19 +14,63 @@
 		<div class="brow bgc-blue c-white">
 			<p class="u-small-text">Congrats to our Boston Ecosystem Challenge winners!</p>
 		</div>
-		<div class="g-full header">
-			<ul class="c-tick_graphic-1">
+
+		<section class=" l-home-gravity">
+
+			<div class="js-fade-carousel">
+				<img src="i/Main%20Image%20Rotating%201%20.jpg">
+				<img src="i/Main%20image%20rotating%202.jpg">
+				<img src="i/Main%20Image%20rotating%203.jpg">
+				<img src="i/Main%20Image%20Rotating%204.jpg">
+				<img src="i/Main%20Image%20Rotating%205.jpg">
+				<img src="i/Main%20Image%20Rotating%206.jpg">
+			</div>
+
+			<ul class="c-tick_graphic-1 animated fadeInRight">
 				<li><img src="i/tick_graphic_1.svg"></li>
 				<li><img src="i/tick_graphic_2.svg"></li>
 				<li><img src="i/tick_graphic_3.svg"></li>
 				<li><img src="i/tick_graphic_4.svg"></li>
 				<li><img src="i/tick_graphic_5.svg"></li>
 			</ul>
-			<header>
-				<img class="logo" src="i/GSV%20Labs%20Boston%20Logo.png"> 
-			</header>
-			<h1 class="c-white"><span>Innovate</span></h1>
-		</div>
+			<div class="c-gravity__content">
+				<div class="h1 c-gravity__title js-gravity__keywords">
+					<span class="js-gravity__keyword is-active">Innovation</span>
+					<span class="js-gravity__keyword">Connections</span>
+					<span class="js-gravity__keyword">Growth</span>
+					<span class="js-gravity__keyword">Ideas</span>
+					<span class="js-gravity__keyword">Community</span>
+					<span class="js-gravity__keyword">Knowledge</span>
+					<span class="js-gravity__keyword">Opportunity</span>
+					<span class="js-gravity__keyword">Courage</span>
+					<span class="js-gravity__keyword">Fun</span>
+					<span class="js-gravity__keyword">Teamwork</span>
+					<span class="js-gravity__keyword">Change</span>
+					<span class="js-gravity__keyword">Hustle</span>
+					<span class="js-gravity__keyword">Reach</span>
+					<span class="js-gravity__keyword">Discovery</span>
+
+					<span class="js-gravity__keyword">Insight</span>
+					<span class="js-gravity__keyword">Inspiration</span>
+					<span class="js-gravity__keyword">Progress</span>
+					<span class="js-gravity__keyword">Influence</span>
+					<span class="js-gravity__keyword">Passion</span>
+
+					<span class="js-gravity__keyword">Victory</span>
+					<span class="js-gravity__keyword">Innovation</span>
+				</div>
+				<p class="u-uppercase">Powered by<br>The Global Silicon Valley</p>
+			</div>
+			<ul class="c-tick_graphic-2 animated fadeInLeft">
+				<li><img src="i/tick_graphic_1.svg"></li>
+				<li><img src="i/tick_graphic_2.svg"></li>
+				<li><img src="i/tick_graphic_3.svg"></li>
+				<li><img src="i/tick_graphic_4.svg"></li>
+				<li><img src="i/tick_graphic_5.svg"></li>
+			</ul>
+		</section>
+
+
 		<div class="g_contain u-extra-padding-sides u-extra-padding-top u-extra-padding-bottom">
 			<div class="g-3 u-text-align-center">
 				<img class="service_icon" src="i/Startups%20Icon.png">
@@ -162,6 +206,7 @@
 	</div>
 	
 	<script src="js/lib/jquery.js"></script>
+	<script src="js/lib/slick.js"></script>
 	<script src="js/lib/selectize.js"></script>
 	<script>
 		var data;
@@ -169,8 +214,6 @@
 			var errors = false;
 			data = serialize(this);
 
-			console.log(data);
-			console.log(JSON.stringify(data));
 
 			//reset errors
 			if (doc.querySelector('.error')) {
@@ -264,6 +307,64 @@
 					});
 			}
 		}(Array.prototype.slice));
+
+
+
+
+    var doc = jQuery(document);
+
+    doc.ready(function() {
+
+      var words = jQuery('.js-gravity__keywords').children(),
+        wordsLength = words.length,
+        counter = 0,
+        timeOut = 1500,
+        timeOutOffset = 3000;
+
+
+      gravity__loop();
+
+      function gravity__loop() {
+        while(counter < wordsLength) {
+          gravity__change_letter(counter);
+          //timeOutOffset = timeOutOffset + 3000;
+          timeOut = timeOut + 1500;
+          counter++;
+        }
+      }
+
+      function gravity__change_letter (i) {
+        setTimeout(function () {
+          if(words.eq(i+1).length) {
+            words.eq(i).removeClass('is-active');
+            words.eq(i + 1).addClass('is-active');
+          } else {
+            gravity__reset();
+          }
+        }, timeOut);
+      }
+
+      function gravity__reset () {
+        counter = 0;
+        timeOut = 2500;
+        timeOutOffset = 1400;
+        jQuery('.js-gravity__keywords .is-active').removeClass('is-active');
+        jQuery('.js-gravity__keywords .js-gravity__keyword:first-child').addClass('is-active');
+      }
+
+
+      jQuery('.js-fade-carousel').slick({
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: false,
+				arrows: false
+      });
+
+    });
 	</script>
 	
 </body>
