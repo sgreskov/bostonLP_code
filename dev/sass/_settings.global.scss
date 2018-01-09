@@ -24,7 +24,8 @@ $page-colors: (
 	orange: #f05025,
 	black: #231f20,
 	white: #ffffff,
-	grey: #b2b2b2
+	grey: #b2b2b2,
+	lighter_grey: rgba(0,0,0,0.025)
 );
 
 @each $page-color, $color in $page-colors {

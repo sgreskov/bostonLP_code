@@ -95,7 +95,7 @@
 			<div class="g-2 one bgc-orange gradient-orange c-white">
 				<h2>Our Boston HQ</h2>
 				<p>Located in the beautiful Lafayette City Center, our brand new state of the art facilities are a stones throw away from some of the largest and most innovated tech companies, VC firms, and universities, in Boston. Conveniently located just a block from the Orange, Red, Green and Silver lines, GSVlabs Boston is the perfect place to go from seed to series A.</p>
-				<a class="c-btn bgc-white c-orange" href="#">Learn more</a>
+				<!-- <a class="c-btn bgc-white c-orange" href="#">Learn more</a> -->
 			</div>
 			<div class="g-2 two bgi bgi-hq"><img src="i/bostonHQ.jpg"></div>
 		</div>
@@ -104,7 +104,7 @@
 			<div class="g-2 four bgc-blue gradient-blue c-white">
 				<h2>Our Community</h2>
 				<p>GSVlabs combines a physical environment designed for working comfortably and efficiently, with access to some of to the brightest minds in Boston. Our community has access to top-tier mentors, industry-leading events, world class investors and a network of leading Fortune 500s.</p>
-				<a class="c-btn bgc-white c-blue" href="#">Learn more</a>
+				<a class="c-btn bgc-white c-blue" href="http://gsvlabs.com/contact" target="_blank">Join the Community</a>
 			</div>
 		</div>
 		<div class="g-full eco_winner c-white">
@@ -118,11 +118,11 @@
 			<h2>Congrats to our Boston Ecosystem Challenge winners!</h2>
 			<p>We are excited to announce the winners of The Boston Startup Challenge! Ten startups focused on Fin Tech, EdTech, Cybersecurity, Digital Health and IoT (selected from over 200 companies) pitched for $225k in non-dilutive funding, a home at GSVlabs Boston Headquarters and customized acceleration support.</p>
 			<p>After extensive deliberation by an esteemed panel of judges, one winner from each vertical was selected was crowned champion!</p>
-			<p>We are so excited to welcome, <a href="#" target="_blank">AdmitHub</a> (EdTech); <a href="#" target="_blank">Vence</a> (IoT); <a href="#" target="_blank">Energetic Insurance</a> (FinTech); <a href="#" target="_blank">Pixm</a> (Cybersecurity); and <a href="#" target="_blank">Medumo</a> (Digital Health) to the GSV family!</p>
+			<p>We are so excited to welcome, <a href="https://www.admithub.com/" target="_blank">AdmitHub</a> (EdTech); <a href="http://vence.io/" target="_blank">Vence</a> (IoT); <a href="https://www.energeticinsurance.com/" target="_blank">Energetic Insurance</a> (FinTech); <a href="https://www.pixm.net/" target="_blank">Pixm</a> (Cybersecurity); and <a href="https://www.medumo.com/" target="_blank">Medumo</a> (Digital Health) to the GSV family!</p>
 			<br>
-			<p><a href="#" target="_blank">&raquo;Learn more about the Boston Ecosystem Challenge…</a></p>
+			<!-- <p><a href="#" target="_blank">&raquo;Learn more about the Boston Ecosystem Challenge…</a></p> -->
 		</div>
-		<div class="g-full bgc-white c-black">
+		<div class="g-full bgc-lighter_grey c-black">
 			<h2 class="u-text-align-center">Blog Section</h2>
 
 			<section class="l-card-grid">
@@ -173,9 +173,15 @@
 						<p>Thank you for signing up! Look forward to some great content.</p>
 					</div>
 					<form name="contact-form" class="c-form js-c-form">
+						<div class="c-form__field form-names g_contain">
+							<label class="u-screenreader">First Name</label>
+							<input class="form-name first-name g-2" type="text" name="first-name" placeholder="First name" required>
+							<label class="u-screenreader">Last Name</label>
+							<input class="form-name last-name g-2" type="text" name="last-name" placeholder="Last name" required>
+						</div>
 						<div class="c-form__field">
-							<label class="u-screenreader">Email Address</label>
-							<input type="text" name="email-address" placeholder="Enter your email" required>
+							<label class="form-email u-screenreader">Email Address</label>
+							<input class="form-email" type="text" name="email-address" placeholder="Enter your email" required>
 						</div>
 						<button type="submit" class="c-btn bgc-green c-white alt green-gradient" value="Stay Connected">Stay Connected</button>
 					</form>
@@ -204,7 +210,7 @@
 	</div>
 	</footer>
 	</div>
-	
+
 	<script src="js/lib/jquery.js"></script>
 	<script src="js/lib/slick.js"></script>
 	<script src="js/lib/selectize.js"></script>
@@ -366,7 +372,7 @@
 
     });
 	</script>
-	
+
 </body>
 
 </html>
