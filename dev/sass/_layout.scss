@@ -297,6 +297,7 @@ input {
 }
 
 .c-form__field {
+	margin-bottom: 24px;
 	input.form-email {
 		width: 400px;
 		border: none;
@@ -326,18 +327,29 @@ input {
 			padding-bottom: 0;
 		}
 	}
-	&.form-names {
-		display: block;
-		float: none;
-		margin-bottom: $margin;
 
-		.first-name {
-			margin-right: 4%;
+}
+
+
+
+.form-names {
+	display: flex;
+	float: none;
+	justify-content: space-between;
+	//margin-bottom: $margin;
+
+	> div {
+		width: 48%;
+
+		.form-name {
+			float: none;
+			width: 100%;
 		}
-		.last-name {
-			margin-right: 0;
-		}
-		@media #{$medium} {
+	}
+
+	@media #{$medium} {
+		flex-direction: column;
+		> div {
 			width: 384px;
 			.first-name,
 			.last-name {
@@ -345,14 +357,17 @@ input {
 				margin: 0 0 24px;
 			}
 		}
-		@media #{$small} {
+	}
+	@media #{$small} {
+		> div {
 			width: 344px;
 		}
 	}
+
 }
 
-
-button {
+button,
+input[type="submit"]{
 	border: none;
 	outline: none;
 	opacity: 1;
@@ -365,4 +380,19 @@ button {
 		opacity: .8;
 		cursor: pointer;
 	}
+}
+
+.mc-field-group {
+	position: relative;
+}
+
+
+#mce-responses {
+	clear: both;
+}
+
+div.mce_inline_error {
+	position: absolute;
+	bottom: -20px;
+	left: 2px;
 }

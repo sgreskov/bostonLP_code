@@ -168,23 +168,39 @@
 			<p class="u-text-align-center c-white">Stay in touch with our curated bi-weekly newletter</p>
 			<!--FORM-->
 			<div class="c-form">
+
 				<div class="c-form-container">
 					<div class="c-form-success u-text-align-center c-white js-c-form-success">
 						<p>Thank you for signing up! Look forward to some great content.</p>
 					</div>
-					<form name="contact-form" class="c-form js-c-form">
-						<div class="c-form__field form-names g_contain">
-							<label class="u-screenreader">First Name</label>
-							<input class="form-name first-name g-2" type="text" name="first-name" placeholder="First name" required>
-							<label class="u-screenreader">Last Name</label>
-							<input class="form-name last-name g-2" type="text" name="last-name" placeholder="Last name" required>
+					<form class="c-form js-c-form validate"  action="//pioneersummit.us12.list-manage.com/subscribe/post?u=bb9c26a17752797fbdb7cf3ed&amp;id=afe89d3e6c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+						<div class="  form-names ">
+							<div class="c-form__field mc-field-group">
+								<label class="u-screenreader">First Name</label>
+								<input class="form-name first-name g-2 required" type="text" id="mce-FNAME" name="FNAME" placeholder="First name" required>
+							</div>
+
+							<div class="mc-field-group c-form__field">
+								<label class="u-screenreader">Last Name</label>
+								<input class="form-name last-name g-2 required" type="text" id="mce-LNAME" name="LNAME" placeholder="Last name" required>
+							</div>
 						</div>
-						<div class="c-form__field">
+						<div class="c-form__field mc-field-group">
 							<label class="form-email u-screenreader">Email Address</label>
-							<input class="form-email" type="text" name="email-address" placeholder="Enter your email" required>
+							<input class="form-email required email" id="mce-EMAIL" type="email" name="EMAIL" placeholder="Enter your email" required>
 						</div>
-						<button type="submit" class="c-btn bgc-green c-white alt green-gradient" value="Stay Connected">Stay Connected</button>
+						<input type="submit" name="subscribe" id="mc-embedded-subscribe" class="c-btn bgc-green c-white alt green-gradient" value="Stay Connected">
+
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bb9c26a17752797fbdb7cf3ed_afe89d3e6c" tabindex="-1" value=""></div>
 					</form>
+
+					<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+
 				</div>
 			</div>
 		</div>
@@ -215,107 +231,6 @@
 	<script src="js/lib/slick.js"></script>
 	<script src="js/lib/selectize.js"></script>
 	<script>
-		var data;
-		document.querySelector('[name=contact-form]').addEventListener('submit', function(event) {
-			var errors = false;
-			data = serialize(this);
-
-
-			//reset errors
-			if (doc.querySelector('.error')) {
-				doc.querySelector('.error').classList.remove('error');
-			}
-			if (doc.querySelector('.selectize-input.error')) {
-				doc.querySelector('.selectize-input.error').classList.remove('error');
-			}
-
-			for (var i = 0; i < data.length; i++) {
-				if (data[i]['name'] !== '') {
-					if ((!data[i]['value'] && data[i]['required']) || (data[i]['name'] == 'interested-in' && !data[i]['value'])) {
-						//if there is no value, add error class and set errors flag
-						errors = true;
-						doc.querySelector('[name=' + data[i]['name'] + ']').classList.add('error');
-						//if the select has an error, we need to apply the error class to a different element
-						if (data[i]['name'] == 'interested-in') {
-							doc.querySelector('.selectize-input').classList.add('error');
-						}
-					}
-				}
-			}
-
-			if (!errors) {
-				var request = new XMLHttpRequest();
-				request.open('POST', 'form-submit.php?format=json', true);
-				request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-
-				request.send(JSON.stringify(data));
-
-				request.onreadystatechange = function() {
-					if (request.readyState == 4 && request.status == 200) {
-						//hide form and show thank you message
-						doc.querySelector('.js-c-form').classList.add('is-hidden');
-						doc.querySelector('.js-c-form-success').classList.add('is-visible');
-					}
-				};
-			}
-			event.preventDefault();
-			return false;
-		});
-
-
-		var serialize = (function(slice) {
-			return function(form) {
-				//no form, no serialization
-				if (form == null)
-					return null;
-
-				//get the form elements and convert to an array
-				return slice.call(form.elements)
-					.filter(function(element) {
-						//remove disabled elements
-						return !element.disabled;
-					}).filter(function(element) {
-						//remove unchecked checkboxes and radio buttons
-						return !/^input$/i.test(element.tagName) || !/^(?:checkbox|radio)$/i.test(element.type) || element.checked;
-					}).filter(function(element) {
-						//remove <select multiple> elements with no values selected
-						return !/^select$/i.test(element.tagName) || element.selectedOptions.length > 0;
-					}).map(function(element) {
-						switch (element.tagName.toLowerCase()) {
-							case 'checkbox':
-							case 'radio':
-								return {
-									name: element.name,
-									value: element.value === null ? 'on' : element.value
-								};
-							case 'select':
-								if (element.multiple) {
-									return {
-										name: element.name,
-										value: slice.call(element.selectedOptions)
-											.map(function(option) {
-												return option.value;
-											})
-									};
-								}
-								return {
-									name: element.name,
-									value: element.value,
-									required: element.hasAttribute('required')
-								};
-							default:
-								return {
-									name: element.name,
-									value: element.value || '',
-									required: element.hasAttribute('required')
-								};
-						}
-					});
-			}
-		}(Array.prototype.slice));
-
-
-
 
     var doc = jQuery(document);
 
