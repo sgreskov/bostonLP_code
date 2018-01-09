@@ -302,7 +302,7 @@ input {
 		width: 400px;
 		border: none;
 		outline: none;
-		padding-left: $site-padding;
+		padding-left: 16px;
 		border-radius: $border-radius 0 0 $border-radius;
 		&::placeholder {
 			color: rgba(0, 0, 0, 0.16);
@@ -317,7 +317,7 @@ input {
 	input.form-name {
 		border: none;
 		outline: none;
-		padding-left: 4%;
+		padding-left: 16px;
 		border-radius: $border-radius;
 		&::placeholder {
 			color: rgba(0, 0, 0, 0.16);
@@ -393,6 +393,8 @@ input[type="submit"]{
 
 div.mce_inline_error {
 	position: absolute;
-	bottom: -20px;
-	left: 2px;
+	bottom: -16px;
+	left: 0;
+	color: white;
+	font-size: 10px;
 }
