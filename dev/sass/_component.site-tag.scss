@@ -1,0 +1,53 @@
+.c-site-tag {
+  display: block;
+  width: 160px;
+  height: 60px;
+  font: 700 14px/16px "Lato", "Arial";
+  border-radius: 3px 0 0 3px;
+  background: #00c93b;
+  color: #fff;
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  z-index: 9000;
+  padding: 14px 0 14px 17px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: .25s ease-out;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.c-site-tag img {
+  margin-right: 12px;
+}
+/* line 145, ../../../../dev/sass/_components.signup.scss */
+.c-site-tag span,
+.c-site-tag img {
+  vertical-align: middle;
+  display: inline-block;
+}
+/* line 151, ../../../../dev/sass/_components.signup.scss */
+.c-site-tag:hover {
+  background: #00962c;
+}
+/* line 155, ../../../../dev/sass/_components.signup.scss */
+.c-site-tag.is-visible {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+@media screen and (max-width: 600px) {
+  /* line 122, ../../../../dev/sass/_components.signup.scss */
+  .c-site-tag {
+    width: 43px;
+    height: 38px;
+    padding: 10px;
+    bottom: 20px;
+  }
+  /* line 165, ../../../../dev/sass/_components.signup.scss */
+  .c-site-tag span {
+    display: none;
+  }
+}

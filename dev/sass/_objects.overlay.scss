@@ -1,0 +1,37 @@
+.o-overlay {
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.7);
+  transition: $transition-in;
+  opacity: 0;
+  visibility: hidden;
+
+  &.is-visible {
+    transition: $transition-out;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.o-overlay__content {
+  width: 90%;
+  max-width: 900px;
+  box-sizing: border-box;
+  padding: 40px 5%;
+  text-align: center;
+  position: relative;
+}
+
+.o-overlay__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}

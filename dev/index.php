@@ -12,7 +12,7 @@
 <body>
 	<div class="site-contain">
 		<div class="brow bgc-blue c-white">
-			<p class="u-small-text">Congrats to our Boston Ecosystem Challenge winners!</p>
+			<p class="u-small-text">Congrats to our Boston Startup Challenge winners!</p>
 		</div>
 
 		<section class=" l-home-gravity">
@@ -115,7 +115,7 @@
 				<li><img src="i/tick_graphic_4.svg"></li>
 				<li><img src="i/tick_graphic_5.svg"></li>
 			</ul>
-			<h2>Congrats to our Boston Ecosystem Challenge winners!</h2>
+			<h2>Congrats to our Boston Startup Challenge winners!</h2>
 			<p>We are excited to announce the winners of The Boston Startup Challenge! Ten startups focused on Fin Tech, EdTech, Cybersecurity, Digital Health and IoT (selected from over 200 companies) pitched for $225k in non-dilutive funding, a home at GSVlabs Boston Headquarters and customized acceleration support.</p>
 			<p>After extensive deliberation by an esteemed panel of judges, one winner from each vertical was selected was crowned champion!</p>
 			<p>We are so excited to welcome, <a href="https://www.admithub.com/" target="_blank">AdmitHub</a> (EdTech); <a href="http://vence.io/" target="_blank">Vence</a> (IoT); <a href="https://www.energeticinsurance.com/" target="_blank">Energetic Insurance</a> (FinTech); <a href="https://www.pixm.net/" target="_blank">Pixm</a> (Cybersecurity); and <a href="https://www.medumo.com/" target="_blank">Medumo</a> (Digital Health) to the GSV family!</p>
@@ -157,13 +157,43 @@
 				<li><img src="i/tick_graphic_5.svg"></li>
 			</ul>
 			<div class="g-2 about-copy">
+				<h2>About GSVlabs</h2>
 				<p>GSVlabs is a global innovation platform based in the heart of Silicon Valley. We accelerate startups and connect corporations to exponential technologies, business models, and ideas. GSVlabs creates powerful network effects by catalyzing the innovation ecosystem and connecting Silicon Valley to the World and the World to Silicon Valley.</p>
 				<p>From Austin to Boston, to Chicago and São Paulo; from Shanghai to Mumbai to Dubai, a Global Silicon Valley is emerging.</p>
+
+				<a class="c-btn bgc-white c-btn--blue c-blue" href="http://gsvlabs.com/about/" target="_blank">About GSVlabs</a>
 			</div>
 			<div class="g-2 about-img bgi g-slant-full-img white-slant">
 			</div>
 		</div>
-		<div class="g-full bgc-blue gradient-blue">
+
+
+		<footer>
+		<div class="g_contain footer bgc-white c-black u-extra-padding-sides">
+			<div class="g-4">
+				<img class="footer_logo" src="i/footer_logo.png">
+			</div>
+			<div class="g-4">
+				<icon><img src="i/Location%20icon.png"></icon>
+				<p><strong>Lafayette City Center</strong><br>2 Avenue de Lafayette<br>4th floor Boston MA 02111</p>
+			</div>
+			<div class="g-4">
+				<icon><img src="i/gmail%20icon.png"></icon>
+				<p><a href="mailto:contact@gsvlabs.com" class="c-black"><strong>contact@gsvlabs.com</strong></a></p>
+			</div>
+			<div class="g-4">
+				<icon><img src="i/website%20icon.png"></icon>
+				<p><a href="http://gsvlabs.com/boston" class="c-black"><strong>gsvlabs.com/boston</strong></a></p>
+			</div>
+			<span class="c-grey copyright">&copy;2011-2016 GSV Asset Management, all rights reserved. GSV, the GSV "non-concentric circles" logo, and "Invest in tomorrow’s stars. Today." are registered marks of GSV Asset Management, LLC.<br>
+	All other marks are property of their respective owners.</span>
+	</div>
+	</footer>
+	</div>
+
+	<div class="o-overlay js-overlay">
+		<div class="o-overlay__content bgc-blue gradient-blue">
+			<div class="o-overlay__close-btn js-close-overlay"><img width="18" src="i/icon__close.svg"></div>
 			<h2 class="u-text-align-center c-white">Want to stay up to date with the latest in Startup news from Boston?</h2>
 			<p class="u-text-align-center c-white">Stay in touch with our curated bi-weekly newletter</p>
 			<!--FORM-->
@@ -204,27 +234,10 @@
 				</div>
 			</div>
 		</div>
-		<footer>
-		<div class="g_contain footer bgc-white c-black u-extra-padding-sides">
-			<div class="g-4">
-				<img class="footer_logo" src="i/footer_logo.png">
-			</div>
-			<div class="g-4">
-				<icon><img src="i/Location%20icon.png"></icon>
-				<p><strong>Lafayette City Center</strong><br>2 Avenue de Lafayette<br>4th floor Boston MA 02111</p>
-			</div>
-			<div class="g-4">
-				<icon><img src="i/gmail%20icon.png"></icon>
-				<p><a href="mailto:contact@gsvlabs.com" class="c-black"><strong>contact@gsvlabs.com</strong></a></p>
-			</div>
-			<div class="g-4">
-				<icon><img src="i/website%20icon.png"></icon>
-				<p><a href="http://gsvlabs.com/boston" class="c-black"><strong>gsvlabs.com/boston</strong></a></p>
-			</div>
-			<span class="c-grey copyright">&copy;2011-2016 GSV Asset Management, all rights reserved. GSV, the GSV "non-concentric circles" logo, and "Invest in tomorrow’s stars. Today." are registered marks of GSV Asset Management, LLC.<br>
-	All other marks are property of their respective owners.</span>
 	</div>
-	</footer>
+	<div class="c-site-tag js-open-overlay" data-overlay="signup">
+		<img width="23" src="i/icon_emailsignup.svg">
+		<span>Stay<br>Connected</span>
 	</div>
 
 	<script src="js/lib/jquery.js"></script>
@@ -232,9 +245,28 @@
 	<script src="js/lib/selectize.js"></script>
 	<script>
 
+    $window = jQuery(window);
+    jQuery(window).scroll(function() {
+      var fromTop = $window.scrollTop();
+
+      if (fromTop >= 400) {
+        jQuery('.c-site-tag').addClass('is-visible');
+      }
+    });
+
     var doc = jQuery(document);
 
     doc.ready(function() {
+
+      //open overlay
+			jQuery('.js-open-overlay').on('click', function(){
+			  jQuery('.js-overlay').addClass('is-visible');
+			});
+
+      //close overlay
+      jQuery('.js-close-overlay').on('click', function(){
+        jQuery('.js-overlay').removeClass('is-visible');
+      });
 
       var words = jQuery('.js-gravity__keywords').children(),
         wordsLength = words.length,
