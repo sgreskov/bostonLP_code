@@ -1,0 +1,66 @@
+.std-form-container {
+  position: relative;
+}
+
+.std-from-success {
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-in;
+  position: absolute;
+  top: 0;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: $transition-out;
+  }
+}
+
+.std-form {
+  font-family: $siteFont;
+  opacity: 1;
+  visibility: visible;
+  transition: $transition-in;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-out;
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    font-family: $siteFont;
+    display: block;
+    width: 100%;
+
+    border: 1px solid gray;
+    padding: 8px 10px;
+    float: none;
+
+    &.error {
+      border-color: #cc0000;
+    }
+  }
+
+  button {
+    -webkit-appearance: none;
+    border: none !important;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 3px;
+    font: 600 13px/15px "Lato", "Arial";
+    padding: 10px 13px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(#00c83b 8%, #00b037 100%);
+    z-index: 100;
+    position: relative;
+    transition: opacity 0.25s ease-in-out;
+  }
+}
+
+.std-form__field {
+  margin-bottom:16px;
+}

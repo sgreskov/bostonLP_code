@@ -16,6 +16,75 @@
   </div>
 
 
+  <div class="g-full">
+    <h2>Contact</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem deleniti dicta dolor earum ipsum provident, reiciendis reprehenderit tempora. Aperiam cupiditate deleniti dolor esse laboriosam neque sapiente sed similique, ut!</p>
+
+
+    <div class="l-form-wrapper">
+      <div class="c-form">
+        <div class="std-form-container">
+
+          <div class="std-from-success js-std-form-success">
+            <h3>Thank you for contacting us. We will be in touch after reviewing your inquiry.</h3>
+          </div>
+
+          <form name="contact-form" class="std-form js-std-form">
+            <div class="std-form__field">
+              <label class="u-screenreader">First Name</label>
+              <input type="text" name="first-name" placeholder="First Name" required>
+            </div>
+
+            <div class="std-form__field">
+              <label class="u-screenreader">Last Name</label>
+              <input type="text" name="last-name" placeholder="Last Name" required>
+            </div>
+
+            <div class="std-form__field">
+              <label class="u-screenreader">Email</label>
+              <input type="email" name="email" placeholder="Email" required>
+            </div>
+
+
+            <div class="std-form__field">
+              <label class="u-screenreader">I'd like to connect with a member of the GSVlabs Team about...</label>
+              <select class="js-selectize" name="interested-in" required>
+                <option value="">I'd like to connect with a member about...</option>
+                <option value="Joining the community">Joining the community</option>
+                <option value="Investor Forum">Investor Forum</option>
+                <option value="Corporate Innovation">Corporate Innovation</option>
+                <option value="General Interest">General Interest</option>
+              </select>
+            </div>
+
+            <div class="std-form__field">
+              <label class="u-screenreader">Comments</label>
+              <textarea rows="4" name="comments" placeholder="Comments"></textarea>
+            </div>
+
+
+            <button type="submit" class="c-btn alt" value="Submit">Submit</button>
+
+          </form>
+        </div>
+
+      </div>
+
+      <div class="l-contact-address c-contact-address">
+        <div class="c-contact-address__heading">Lafayette City Center</div>
+        <div class="c-contact-address__address">
+          <div>
+            2 Avenue de Lafayette,<br>
+            4th floor<br>
+            Boston, MA 02111
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 
 
   <footer>
@@ -93,6 +162,7 @@
 <script src="js/lib/jquery.js"></script>
 
 <script src="js/lib/selectize.js"></script>
+<script src="js/form.js"></script>
 <script>
 
   $window = jQuery(window);
@@ -104,9 +174,9 @@
     }
   });
 
-  var doc = jQuery(document);
+  var $doc = jQuery(document);
 
-  doc.ready(function() {
+  $doc.ready(function() {
 
     //open overlay
     jQuery('.js-open-overlay').on('click', function(){

@@ -76,19 +76,19 @@
 				<img class="service_icon" src="i/Startups%20Icon.png">
 				<h2 class="c-green">Startups</h2>
 				<p>We have developed a comprehenisve platform to help unlock the inovation capacity of our corporate partners</p>
-				<a target="_blank" class="c-green" href="http://gsvlabs.com/startups/">&raquo;Learn more</a>
+				<a target="_blank" class="c-green" href="contact.php">&raquo;Learn more</a>
 			</div>
 			<div class="g-3 u-text-align-center">
 				<img class="service_icon" src="i/Corporations%20Icon.png">
 				<h2 class="c-blue">Corporations</h2>
 				<p>We accelerate startups by connecting the members of our communito to the resources they need to grow and make amazing things happen</p>
-				<a target="_blank" class="c-blue" href="http://gsvlabs.com/corporations/">&raquo;Learn more</a>
+				<a target="_blank" class="c-blue" href="contact.php">&raquo;Learn more</a>
 			</div>
 			<div class="g-3 u-text-align-center">
 				<img class="service_icon" src="i/Investors%20Icon.png">
 				<h2 class="c-orange">Investors</h2>
 				<p>The Investor Forum is a unique platform for leading investor that gives them urated access to our global startup community.</p>
-				<a target="_blank" class="c-orange" href="http://gsvlabs.com/investors/">&raquo;Learn more</a>
+				<a target="_blank" class="c-orange" href="contact.php">&raquo;Learn more</a>
 			</div>
 		</div>
 		<div class="g_contain butted">
@@ -104,7 +104,7 @@
 			<div class="g-2 four bgc-blue gradient-blue c-white">
 				<h2>Our Community</h2>
 				<p>GSVlabs combines a physical environment designed for working comfortably and efficiently, with access to some of to the brightest minds in Boston. Our community has access to top-tier mentors, industry-leading events, world class investors and a network of leading Fortune 500s.</p>
-				<a class="c-btn bgc-white c-blue" href="http://gsvlabs.com/contact" target="_blank">Join the Community</a>
+				<a class="c-btn bgc-white c-blue" href="contact.php">Join the Community</a>
 			</div>
 		</div>
 		<div class="g-full eco_winner c-white">

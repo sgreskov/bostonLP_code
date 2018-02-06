@@ -426,3 +426,48 @@ div.mce_inline_error {
 	color: white;
 	font-size: 10px;
 }
+
+.l-form-wrapper {
+	display: flex;
+
+
+	> div {
+		margin-bottom: 32px;
+	}
+
+	.c-contact-address__heading {
+		font: 900 22px/26px "Lato", "Arial";
+	}
+
+	.c-contact-address {
+		font: 300 22px/26px "Lato", "Arial";
+	}
+
+
+	.c-contact-address__address {
+		margin-bottom: 20px;
+		color: gray;
+	}
+
+	.c-contact-address__reach-out a {
+		color: #00c93b;
+		font-weight: 900;
+	}
+
+	.c-form {
+		margin-top: 0 !important;
+	}
+
+
+	@media screen and (min-width: 800px) {
+		.c-form {
+
+			width: 58%;
+			margin-right: 6%;
+		}
+
+		> div {
+			margin-bottom: 0;
+		}
+	}
+}
