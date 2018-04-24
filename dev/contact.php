@@ -19,7 +19,7 @@
   <div class="g-full">
     <h2>Contact</h2>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem deleniti dicta dolor earum ipsum provident, reiciendis reprehenderit tempora. Aperiam cupiditate deleniti dolor esse laboriosam neque sapiente sed similique, ut!</p>
+    <p>Let’s connect! If you have something to share with us—a question, an idea, a comment, concern, request…anything—we encourage you to speak up using the form below. Your inquiry will be routed to the right individual(s) at GSVlabs, and someone from our team will get back to you ASAP.</p>
 
 
     <div class="l-form-wrapper">
